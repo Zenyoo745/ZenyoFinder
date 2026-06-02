@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zenyo Finder Admin Inbox</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-animations">
+    <span class="orb orb1"></span>
+    <span class="orb orb2"></span>
+    <span class="orb orb3"></span>
+  </div>
+  <main class="page-shell">
+    <header class="hero admin-hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Zenyo Finder Admin</span>
+        <h1>Report inbox</h1>
+        <p>Review saved customer issue reports and clear the inbox once handled.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="index.html">Back to Finder</a>
+          <button id="clearReports" class="secondary">Clear all reports</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="report-inbox-panel">
+      <div class="report-card">
+        <h2>Saved reports</h2>
+        <div id="reportInbox"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

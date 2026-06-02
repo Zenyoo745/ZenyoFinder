@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zenyo Finder | Free Fire Sensitivity Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-animations">
+    <span class="orb orb1"></span>
+    <span class="orb orb2"></span>
+    <span class="orb orb3"></span>
+  </div>
+  <main class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Zenyo Finder</span>
+        <h1>Find the best Free Fire sensitivity for your phone.</h1>
+        <p>Search your device, choose your playstyle, and get headshot-ready sensitivity presets with a futuristic 3D interface.</p>
+        <div class="subnav">
+          <a class="nav-link" href="admin.html">Admin Inbox</a>
+          <span class="nav-note">Configure EmailJS in `script.js` to send report emails directly to your inbox.</span>
+        </div>
+        <div class="controls">
+          <select id="deviceSelect" aria-label="Choose a device">
+            <option value="">Choose a device</option>
+          </select>
+          <input id="deviceSearch" type="search" placeholder="Search device: iPhone 15, Pixel 8, Vivo V30..." autofocus />
+          <select id="playstyleSelect" aria-label="Playstyle">
+            <option value="headshot">Headshot</option>
+            <option value="sniper">Sniper</option>
+            <option value="rush">Rush</option>
+            <option value="balanced">Balanced</option>
+          </select>
+        </div>
+        <div class="hero-actions">
+          <button id="findButton">Find My Sensitivity</button>
+          <button id="aiButton" class="secondary">AI Sensi Maker</button>
+          <span class="hint">Supports 500+ phone models and all major brands.</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="device-shell">
+          <div class="device-screen">
+            <div class="device-card">
+              <div class="device-status">Zenyo Finder</div>
+              <div class="device-meta">
+                <div class="device-name" id="heroDeviceName">Search your phone</div>
+                <div class="device-subtitle" id="heroDeviceDpi">DPI: --</div>
+              </div>
+              <div class="device-values" id="heroDeviceValues">
+                <div><strong>General</strong><span>45</span></div>
+                <div><strong>Red Dot</strong><span>51</span></div>
+                <div><strong>2x Scope</strong><span>32</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="features-grid">
+      <article>
+        <h2>Smart device search</h2>
+        <p>Quickly find presets for iPhone, Samsung, Google Pixel, Vivo, Infinix, Xiaomi, Oppo and many more.</p>
+      </article>
+      <article>
+        <h2>Headshot-ready presets</h2>
+        <p>Get tuned sensitivity recommendations for headshot, sniper, rush, and balanced combat.</p>
+      </article>
+      <article>
+        <h2>Interactive 3D styling</h2>
+        <p>Modern neon and depth effects give Zenyo Finder a premium gaming feel.</p>
+      </article>
+      <article>
+        <h2>Save & share</h2>
+        <p>Keep favorite presets and share your best build with friends or your squad.</p>
+      </article>
+    </section>
+
+    <section class="result-panel">
+      <div class="result-card">
+        <h2>Recommended setup</h2>
+        <p id="resultSummary">Search a device and choose a playstyle to reveal optimized Free Fire sensitivity settings.</p>
+        <div class="result-meta" id="resultMeta">Select a device to see DPI and AI-tuned recommendations.</div>
+        <div class="result-values" id="resultValues">
+          <div><span>General</span><strong>--</strong></div>
+          <div><span>Red Dot</span><strong>--</strong></div>
+          <div><span>2x Scope</span><strong>--</strong></div>
+          <div><span>4x Scope</span><strong>--</strong></div>
+          <div><span>AWM</span><strong>--</strong></div>
+          <div><span>Free Look</span><strong>--</strong></div>
+        </div>
+      </div>
+      <div class="library-card">
+        <h2>Example device matches</h2>
+        <ul id="deviceList"></ul>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <div class="report-card">
+        <h2>Report a problem</h2>
+        <p>Having trouble with a device preset? Tell us what went wrong and we’ll improve Zenyo Finder.</p>
+        <form id="reportForm">
+          <div class="form-row">
+            <input id="reportName" name="reportName" type="text" placeholder="Your name" required />
+            <input id="reportEmail" name="reportEmail" type="email" placeholder="Your email" required />
+          </div>
+          <div class="form-row">
+            <select id="reportDevice" name="reportDevice" aria-label="Report device">
+              <option value="">Select device</option>
+            </select>
+            <select id="reportIssue" name="reportIssue" aria-label="Issue type">
+              <option value="">Issue type</option>
+              <option value="wrong-sensitivity">Wrong sensitivity</option>
+              <option value="missing-device">Missing device</option>
+              <option value="ui-problem">UI problem</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <textarea id="reportMessage" name="reportMessage" rows="4" placeholder="Describe your problem..." required></textarea>
+          <div class="report-actions">
+            <button type="submit" class="primary">Submit report</button>
+            <p id="reportNotice" class="report-notice">Your report is submitted locally in this demo.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="devices.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
